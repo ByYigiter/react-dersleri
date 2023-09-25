@@ -4,7 +4,7 @@ import moment from "moment";
 
 const Clock1 = () => {
 	const dateTime = moment();
-    // require('moment/locale/tr')
+	// require('moment/locale/tr')
 
 	const dateStr = dateTime.format("LL");
 	const timeStr = dateTime.format("HH:mm");
