@@ -21,8 +21,8 @@ function App() {
     {/* <Jsx4/> */}
     {/* <Jsx5/> */}
     {/* <Jsx6/> */}
-    {/* <Style1/>
-    <Style2/> */}
+    {/* <Style1/>*/}
+    {/* <Style2/> */}
     {/* <Style3/> */}
     {/* <Style4/> */}
     <Clock1/>
