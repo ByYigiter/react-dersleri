@@ -11,6 +11,8 @@ import Style3 from "./components/04-styles/Style3";
 import Style4 from "./components/04-styles/Style4";
 import Clock1 from "./components/05-clock1/Clock1";
 import Greetings from "./components/06-props/Greetings";
+import Products from "./components/06-props/Products";
+import Clock2 from "./components/07-clock2/Clock2";
 
 function App() {
   return (
@@ -27,7 +29,9 @@ function App() {
     {/* <Style3/> */}
     {/* <Style4/> */}
     {/* <Clock1/> */}
-    <Greetings/>
+    {/* <Greetings/> */}
+    {/* <Products/> */}
+    <Clock2 textColor ="red" bgColor="yellow"/>
     </>
   );
 }
