@@ -7,13 +7,14 @@
     font-family: digital;
     background-color: rgb(39, 37, 37);
     border-radius: 0.5rem;
-    color:greenyellow;
+    color:#25f80e;
     display:flex;
     justify-content: center;
     align-items: center;
     gap:1rem;
     padding:1rem;
     font-size:2rem;
+    box-shadow:violet;
 
     .time {
         font-size:5rem;
