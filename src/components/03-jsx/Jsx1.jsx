@@ -5,5 +5,4 @@ const Jsx1 = () => {
     <div>Jsx1</div>
   )
 }
-
 export default Jsx1
