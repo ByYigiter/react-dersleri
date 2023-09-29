@@ -20,6 +20,7 @@ import BootstrapClassic from "./components/10-bootstrap/BootstrapClassic";
 import BootstrapDynamic from "./components/10-bootstrap/BootstrapDynamic";
 import Icons from "./components/11-icons/Icons";
 import Events from "./components/12-events/Events";
+import Shop from "./components/13-products/Shop";
 
 function App() {
   return (
@@ -45,10 +46,11 @@ function App() {
     {/* <BootstrapClassic/> */}
          {/* <BootstrapDynamic/> */}
     {/* <Icons/> */}
-         <Events/>
+         {/* <Events/> */}
+         <Shop/>
           {/* 
 
-      <Shop/>
+
       <Stateless/>
       <State/>
       <Counter/>

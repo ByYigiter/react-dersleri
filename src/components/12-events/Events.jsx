@@ -14,7 +14,7 @@ const Events = () => {
         return `Hello ${name}`
     }
 
-    // console.log(sayHello2("Recep "))
+    console.log(sayHello2)
   return (
     <div>
             {/* parametresiz cağırma işllemi için asağıdaki fonksıyon kullanır */}
