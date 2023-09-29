@@ -7,7 +7,9 @@ const Shop = () => {
   return (
     <div>
         <Header/>
+      
         <ProductList/>
+      
         <Footer/>
     </div>
   )
