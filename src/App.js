@@ -16,6 +16,10 @@ import Clock2 from "./components/07-clock2/Clock2";
 import Gallery from "./components/08-image/Gallery";
 import Image from "./components/08-image/Image";
 import ProfileCard from "./components/09-profile-card/ProfileCard";
+import BootstrapClassic from "./components/10-bootstrap/BootstrapClassic";
+import BootstrapDynamic from "./components/10-bootstrap/BootstrapDynamic";
+import Icons from "./components/11-icons/Icons";
+import Events from "./components/12-events/Events";
 
 function App() {
   return (
@@ -38,14 +42,12 @@ function App() {
     {/* <Image/> */}
     {/* <Gallery/> */}
     {/* <ProfileCard name="Recep Yigiter" location="Istanbul, Turkiye" shot="51" followers="1002" following="100" avatar="resim1.png"/> */}
-
-         
-         
+    {/* <BootstrapClassic/> */}
+         {/* <BootstrapDynamic/> */}
+    {/* <Icons/> */}
+         <Events/>
           {/* 
 
-      <BSClassic/>
-      <BSDynamic/>
-      <ReactIcon />
       <Shop/>
       <Stateless/>
       <State/>
