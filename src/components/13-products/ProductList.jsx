@@ -5,8 +5,8 @@ import Product from "./Product";
 
 const ProductList = () => {
 	return (
-        //  kenarlara bosşlukarl almak için fluid kullanılır Container fluid
-		<Container> 
+		//  kenarlara bosşlukarl almak için fluid kullanılır Container fluid
+		<Container>
 			<Row className="g-5 mt-5">
 				{products.map((product, index) => (
 					<Col key={product.id} md={6} lg={4} xl={3}>

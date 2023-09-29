@@ -13,12 +13,10 @@ const Header = () => {
           <Nav.Link href="#link">Products</Nav.Link>
           <Nav.Link href="#link">About Us</Nav.Link>
           <Nav.Link href="#link">Contact Us</Nav.Link>
-          
         </Nav>
       </Navbar.Collapse>
     </Container>
   </Navbar>
   )
 }
-
-export default Header
+export default Header;
