@@ -13,6 +13,9 @@ import Clock1 from "./components/05-clock1/Clock1";
 import Greetings from "./components/06-props/Greetings";
 import Products from "./components/06-props/Products";
 import Clock2 from "./components/07-clock2/Clock2";
+import Gallery from "./components/08-image/Gallery";
+import Image from "./components/08-image/Image";
+import ProfileCard from "./components/09-profile-card/ProfileCard";
 
 function App() {
   return (
@@ -31,7 +34,40 @@ function App() {
     {/* <Clock1/> */}
     {/* <Greetings/> */}
     {/* <Products/> */}
-    <Clock2 textColor ="red" bgColor="yellow"/>
+    {/* <Clock2 textColor ="red" bgColor="yellow"/> */}
+    {/* <Image/> */}
+    {/* <Gallery/> */}
+    {/* <ProfileCard name="Recep Yigiter" location="Istanbul, Turkiye" shot="51" followers="1002" following="100" avatar="resim1.png"/> */}
+
+         
+         
+          {/* 
+
+      <BSClassic/>
+      <BSDynamic/>
+      <ReactIcon />
+      <Shop/>
+      <Stateless/>
+      <State/>
+      <Counter/>
+      <Birthday/>
+      <UseEffect/>
+      <Clock3/>
+      <Useeffect/>
+      <RandomImages/>
+      <Useref/>
+      <ClassTypeTest message="Hello World"/>
+      <UserCards/>
+      <Countries />           
+      <AxiosCrud/>
+      <Form1/>
+      <Form2/>
+      <Form3/>
+      <Form4/>
+      <Form5/>
+      <Form6 />
+      */}
+
     </>
   );
 }
