@@ -10,13 +10,17 @@ const Birthday = () => {
 		setPeople(arr);
 	};
 	return (
-		<Container className ="mb-3">
+		<Container className="mb-3">
 			<h1>Bugun Doganlar</h1>
 			<p>Bugun dogan {people.length} kisi bulundu</p>
 			{people.map((item) => (
 				<PersonCard {...item} key={item.id} deletePerson={deletePerson} />
 			))}
-			<Button variant="danger" onClick={() => setPeople([])} style={{marginRight:"2rem"}} >
+			<Button
+				variant="danger"
+				onClick={() => setPeople([])}
+				style={{ marginRight: "2rem" }}
+			>
 				Remove All
 			</Button>
 			<Button variant="success" onClick={() => setPeople(data)}>

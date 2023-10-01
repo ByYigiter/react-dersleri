@@ -25,6 +25,10 @@ import State from "./components/14-state/State";
 import Stateless from "./components/14-state/Stateless";
 import Counter from "./components/15-counter/Counter";
 import Birthday from "./components/16-birthday/Birthday";
+import UseEffect from "./components/17-useeffect/UseEffect";
+import UseEffect2 from "./components/17-useeffect/UseEffect2";
+import Clock3 from "./components/18-clock3/Clock3";
+import CountryFilter from "./components/19-country-filter/CountryFilter";
 
 function App() {
 	return (
@@ -53,16 +57,17 @@ function App() {
 			{/* <Events/> */}
 			{/* <Shop/> */}
 			{/* <Stateless /> */}
-      		{/* <State/> */}
-			  {/* <Counter/> */}
-			  <Birthday/>
-
+			{/* <State/> */}
+			{/* <Counter/> */}
+			{/* <Birthday/> */}
+			{/* <UseEffect /> */}
+			{/* {false && <UseEffect />} */}
+			{/* <Clock3/> */}
+			{/* <UseEffect2/> */}
+			<CountryFilter/>
 
 			{/*
 
-      <UseEffect/>
-      <Clock3/>
-      <Useeffect/>
       <RandomImages/>
       <Useref/>
       <ClassTypeTest message="Hello World"/>
