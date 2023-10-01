@@ -10,7 +10,7 @@ const Birthday = () => {
 		setPeople(arr);
 	};
 	return (
-		<Container>
+		<Container className ="mb-3">
 			<h1>Bugun Doganlar</h1>
 			<p>Bugun dogan {people.length} kisi bulundu</p>
 			{people.map((item) => (
