@@ -21,40 +21,45 @@ import BootstrapDynamic from "./components/10-bootstrap/BootstrapDynamic";
 import Icons from "./components/11-icons/Icons";
 import Events from "./components/12-events/Events";
 import Shop from "./components/13-products/Shop";
+import State from "./components/14-state/State";
+import Stateless from "./components/14-state/Stateless";
+import Counter from "./components/15-counter/Counter";
+import Birthday from "./components/16-birthday/Birthday";
 
 function App() {
-  return (
-    <>
-    {/* <HelloWorld/> */}
-    {/* <Jsx1/> */}
-    {/* <Jsx2/> */}
-    {/* <Jsx3/> */}
-    {/* <Jsx4/> */}
-    {/* <Jsx5/> */}
-    {/* <Jsx6/> */}
-    {/* <Style1/>*/}
-    {/* <Style2/> */}
-    {/* <Style3/> */}
-    {/* <Style4/> */}
-    {/* <Clock1/> */}
-    {/* <Greetings/> */}
-    {/* <Products/> */}
-    {/* <Clock2 textColor ="red" bgColor="yellow"/> */}
-    {/* <Image/> */}
-    {/* <Gallery/> */}
-    {/* <ProfileCard name="Recep Yigiter" location="Istanbul, Turkiye" shot="51" followers="1002" following="100" avatar="resim1.png"/> */}
-    {/* <BootstrapClassic/> */}
-         {/* <BootstrapDynamic/> */}
-    {/* <Icons/> */}
-         {/* <Events/> */}
-         <Shop/>
-          {/* 
+	return (
+		<>
+			{/* <HelloWorld/> */}
+			{/* <Jsx1/> */}
+			{/* <Jsx2/> */}
+			{/* <Jsx3/> */}
+			{/* <Jsx4/> */}
+			{/* <Jsx5/> */}
+			{/* <Jsx6/> */}
+			{/* <Style1/>*/}
+			{/* <Style2/> */}
+			{/* <Style3/> */}
+			{/* <Style4/> */}
+			{/* <Clock1/> */}
+			{/* <Greetings/> */}
+			{/* <Products/> */}
+			{/* <Clock2 textColor ="red" bgColor="yellow"/> */}
+			{/* <Image/> */}
+			{/* <Gallery/> */}
+			{/* <ProfileCard name="Recep Yigiter" location="Istanbul, Turkiye" shot="51" followers="1002" following="100" avatar="resim1.png"/> */}
+			{/* <BootstrapClassic/> */}
+			{/* <BootstrapDynamic/> */}
+			{/* <Icons/> */}
+			{/* <Events/> */}
+			{/* <Shop/> */}
+			{/* <Stateless /> */}
+      		{/* <State/> */}
+			  {/* <Counter/> */}
+			  <Birthday/>
 
 
-      <Stateless/>
-      <State/>
-      <Counter/>
-      <Birthday/>
+			{/*
+
       <UseEffect/>
       <Clock3/>
       <Useeffect/>
@@ -71,9 +76,8 @@ function App() {
       <Form5/>
       <Form6 />
       */}
-
-    </>
-  );
+		</>
+	);
 }
 
 export default App;

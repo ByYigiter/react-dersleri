@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "image": "person1.jpg",
+      "name": "John",
+      "age": 25
+    },
+    {
+      "id": 2,
+      "image": "person2.jpg",
+      "name": "Alice",
+      "age": 30
+    },
+    {
+      "id": 3,
+      "image": "person3.jpg",
+      "name": "Mike",
+      "age": 35
+    },
+    {
+      "id": 4,
+      "image": "person4.jpg",
+      "name": "Sarah",
+      "age": 28
+    },
+    {
+      "id": 5,
+      "image": "person5.jpg",
+      "name": "David",
+      "age": 32
+    }
+  ]
