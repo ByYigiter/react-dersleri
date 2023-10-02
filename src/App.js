@@ -32,6 +32,7 @@ import CountryFilter from "./components/19-country-filter/CountryFilter";
 import Scroll from "./components/20-useref/Scroll";
 import UseRef from "./components/20-useref/UseRef";
 import ClassComp from "./components/21-class-type-component/ClassComp";
+import UserCards from "./components/22-fetch-users/UserCards";
 
 function App() {
 	return (
@@ -71,12 +72,13 @@ function App() {
 			{/* <UseRef/> */}
 			{/* <Scroll/> */}
 			{/* <ClassComp/> */}
+			<UserCards/>
 
 			{/*
 
       <RandomImages/>
 
-      <UserCards/>
+
       <Countries />           
       <AxiosCrud/>
       <Form1/>
