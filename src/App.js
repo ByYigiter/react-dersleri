@@ -33,6 +33,7 @@ import Scroll from "./components/20-useref/Scroll";
 import UseRef from "./components/20-useref/UseRef";
 import ClassComp from "./components/21-class-type-component/ClassComp";
 import UserCards from "./components/22-fetch-users/UserCards";
+import Countries from "./components/23-axios-country/Countries";
 
 function App() {
 	return (
@@ -72,14 +73,15 @@ function App() {
 			{/* <UseRef/> */}
 			{/* <Scroll/> */}
 			{/* <ClassComp/> */}
-			<UserCards/>
+			{/* <UserCards/> */}
+			<Countries />  
 
 			{/*
 
       <RandomImages/>
 
 
-      <Countries />           
+         
       <AxiosCrud/>
       <Form1/>
       <Form2/>
