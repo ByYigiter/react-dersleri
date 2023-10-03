@@ -34,6 +34,14 @@ import UseRef from "./components/20-useref/UseRef";
 import ClassComp from "./components/21-class-type-component/ClassComp";
 import UserCards from "./components/22-fetch-users/UserCards";
 import Countries from "./components/23-axios-country/Countries";
+import ParentComp from "./components/24-child-to-parent/ParentComp";
+import Form1 from "./components/25-forms/Form1";
+import Form2 from "./components/25-forms/Form2";
+import Form3 from "./components/25-forms/Form3";
+import Form4 from "./components/25-forms/Form4";
+import Form5 from "./components/25-forms/Form5";
+import Form6 from "./components/25-forms/Form6";
+import ToDoApp from "./components/odev-todolist/todo-app";
 
 function App() {
 	return (
@@ -74,21 +82,19 @@ function App() {
 			{/* <Scroll/> */}
 			{/* <ClassComp/> */}
 			{/* <UserCards/> */}
-			<Countries />  
+			{/* <Countries />   */}
+			{/* <ParentComp/> */}
+			{/* <ToDoApp/> */}
+			{/* <Form1/>
+			<Form2/>
+			<Form3/> */}
+			{/* <Form4 /> */}
+			{/* <Form5 /> */}
+			<Form6 />
 
 			{/*
-
       <RandomImages/>
-
-
-         
       <AxiosCrud/>
-      <Form1/>
-      <Form2/>
-      <Form3/>
-      <Form4/>
-      <Form5/>
-      <Form6 />
       */}
 		</>
 	);

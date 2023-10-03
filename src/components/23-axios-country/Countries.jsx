@@ -1,58 +1,64 @@
-import React, { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
-import axios from "axios";
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { Table } from 'react-bootstrap'
+import Country from './Country'
 
 const Countries = () => {
-	const [countries, setCountries] = useState([]);
-	const [loading, setLoading] = useState(true);
 
-	const loadData = async () => {
-		const resp = await axios.get("https://restcountries.com/v3.1/all");
-		const arr = resp.data.sort((a, b) =>
-			a.name.common.localeCompare(b.name.common)
-		);
-		setCountries(arr);
-		console.log(arr);
-		console.log(Object.values(arr[0].currencies)[0].symbol);
-	};
+    const [countries, setCountries] = useState([])
+    const [loading, setloading] = useState(true)
 
-	useEffect(() => {
-		//useeffectin bu modeli sadece component ilk yuklendigindiginde bir kere calisir,re-render larda calismaz, boylece load data 1 kere calisir
-		//useEffecct asenkron oldugu icin her zaman returnden sonra calisir
-		loadData();
-	}, []);
+    const loadData = async() => { 
+      try {
+        const resp = await axios.get("https://restcountries.com/v3.1/all");
+        console.log(resp.data);
+        const arr = resp.data.map(country=>({
+            ccn3:country.ccn3,
+            flag : country.flags.png,
+            name : country.name.common,
+            population : country.population,
+			// ? ger null gelirse hata verme
+            capital : country.capital?.join("-"),
+          //  currencies :item.currencies ? Object.keys(item.currencies).join("-") :""
+            currencies :country.currencies ? Object.keys(country.currencies).map(item=>country.currencies[item].name).join("-") :""
+          }))
+//gelen diziden yeni dizi oluşturuldu çünkü gelen cevaptaki tüm alanlar lazım değil lazım olanlardan eni bir dizi oluşturuldu
+        setCountries(arr);
+        setloading(false)
+        
+      } catch (error) {
+        console.log(error);
+      }
+    }
 
-	return (
-		<Table className="fs-2" striped bordered hover variant="dark">
-			<thead>
-				<tr>
-					<th>#</th>
-					<th>Bayrak</th>
-					<th>Ulke</th>
-					<th>Baskent</th>
-					<th>Para Birimi</th>
-				</tr>
-			</thead>
-			<tbody>
-				{countries.map((country, index) => (
-					<tr key={index}>
-						<td>{country.region}</td>
-						<td>
-							<img src={country.flags.png} alt="" />
-						</td>
-						<td>{country.name.common}</td>
-						<td>{country.capital?.join("-")}</td>
-						<td>
-							{country.currencies &&
-								Object.values(country.currencies)[0].symbol +
-									"-" +
-									Object.values(country.currencies)[0].name}
-						</td>
-					</tr>
-				))}
-			</tbody>
-		</Table>
-	);
-};
+   useEffect(()=>{loadData()}, [])
+    
+  return (
+    <Table striped bordered hover>
+    <thead>
+      <tr>
+        <th>Sıra</th>
+        <th>Bayrak </th>
+        <th>Ülke</th>
+        <th>Nüfus</th>
+        <th>Başkent</th>
+        <th>Para Birimi</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        countries.map((country,i)=><Country key={country.name} {...country} index={i}/>)
+      }
+      <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+    </tbody>
+  </Table>
+  )
+}
 
-export default Countries;
+export default Countries
