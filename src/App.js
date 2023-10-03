@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HelloWorld from "./components/01-hello-world/HelloWorld";
 import Jsx1 from "./components/03-jsx/Jsx1";
 import Jsx2 from "./components/03-jsx/Jsx2";
@@ -42,10 +43,32 @@ import Form4 from "./components/25-forms/Form4";
 import Form5 from "./components/25-forms/Form5";
 import Form6 from "./components/25-forms/Form6";
 import ToDoApp from "./components/odev-todolist/todo-app";
+import Header from "./components/00-home/header/Header";
+import { Col, Container, Row } from "react-bootstrap";
+import Menu from "./components/00-home/menu/Menu";
+
 
 function App() {
 	return (
 		<>
+		<BrowserRouter>
+				<Header/>
+				<Container fluid>
+					<Row>
+						<Col sm={2}>
+							<Menu/>
+						</Col>
+						<Col sm={10}>
+							<Routes>
+								<Route path="/hello-world" element={<HelloWorld/>}/>
+								<Route path="/image" element={Image}/>
+								<Route path="/useEffect" element={UseEffect2}/>
+								<Route path="/bootstrap" element={<BootstrapClassic/>}/>
+							</Routes>
+						</Col>
+					</Row>
+				</Container>
+		</BrowserRouter>
 			{/* <HelloWorld/> */}
 			{/* <Jsx1/> */}
 			{/* <Jsx2/> */}
@@ -90,7 +113,7 @@ function App() {
 			<Form3/> */}
 			{/* <Form4 /> */}
 			{/* <Form5 /> */}
-			<Form6 />
+			{/* <Form6 /> */}
 
 			{/*
       <RandomImages/>
