@@ -61,7 +61,7 @@ function App() {
 						<Col sm={10}>
 							<Routes>
 								<Route path="/hello-world" element={<HelloWorld/>}/>
-								<Route path="/image" element={Image}/>
+								<Route path="/image" element={<Image/>}/>
 								<Route path="/useEffect" element={UseEffect2}/>
 								<Route path="/bootstrap" element={<BootstrapClassic/>}/>
 							</Routes>
