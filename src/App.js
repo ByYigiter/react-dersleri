@@ -45,82 +45,146 @@ import Form6 from "./components/25-forms/Form6";
 import ToDoApp from "./components/odev-todolist/todo-app";
 import Header from "./components/00-home/header/Header";
 import { Col, Container, Row } from "react-bootstrap";
-import Menu from "./components/00-home/menu/Menu";
-
+import Menu1 from "./components/00-home/menu/Menu1";
+import Menu from "./components/00-home/menu/menu";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import StoreContext from "./store";
+import Exchange from "./components/26-context-api/Exchange";
 
 function App() {
+	const [counter, setcounter] = useState(10);
+	const [currencies, setCurrencies] = useState({});
+
+	const loadData = async () => {
+		try {
+			const resp = await axios.get(
+				"https://api.frankfurter.app/latest?from=TRY"
+			);
+			setCurrencies(resp.data.rates);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	useEffect(() => {
+		loadData();
+	}, []);
+
 	return (
-		<>
-		<BrowserRouter>
-				<Header/>
-				<Container fluid>
+		<StoreContext.Provider value={{ counter, currencies }}>
+			<BrowserRouter>
+				<Header />
+				<Container>
 					<Row>
 						<Col sm={2}>
-							<Menu/>
+							<Menu />
 						</Col>
 						<Col sm={10}>
 							<Routes>
-								<Route path="/hello-world" element={<HelloWorld/>}/>
-								<Route path="/image" element={<Image/>}/>
-								<Route path="/useEffect" element={UseEffect2}/>
+								{/* <Route path='/' element={Home}/>  anasayfa tanımlaması */}
+								<Route path="/helloworld" element={<HelloWorld />} />
+ 								<Route path="/hello-world" element={<HelloWorld/>}/>
+ 								<Route path="/image" element={<Image/>}/>
+ 								<Route path="/useEffect" element={UseEffect2}/>
+								<Route >
+									<Route path="/bootstrapstatic" element={<BootstrapClassic />} />
+									<Route path="/bootstrapdynamic" element={<BootstrapDynamic />} />
+								</Route>
 								<Route path="/bootstrap" element={<BootstrapClassic/>}/>
+								<Route >
+									<Route index element={<Jsx1 />} />
+									<Route path="/jsx1" element={<Jsx1 />} />
+									<Route path="/jsx2" element={<Jsx2 />} />
+									<Route path="/jsx3" element={<Jsx3 />} />
+									<Route path="/jsx4" element={<Jsx4 />} />
+									<Route path="/jsx5" element={<Jsx5 />} />
+									<Route path="/jsx6" element={<Jsx6 />} />
+								</Route>
+								<Route path="/exchange" element={<Exchange />} />
+								<Route path="/form6" element={<Form6 />} />
 							</Routes>
 						</Col>
 					</Row>
 				</Container>
-		</BrowserRouter>
-			{/* <HelloWorld/> */}
-			{/* <Jsx1/> */}
-			{/* <Jsx2/> */}
-			{/* <Jsx3/> */}
-			{/* <Jsx4/> */}
-			{/* <Jsx5/> */}
-			{/* <Jsx6/> */}
-			{/* <Style1/>*/}
-			{/* <Style2/> */}
-			{/* <Style3/> */}
-			{/* <Style4/> */}
-			{/* <Clock1/> */}
-			{/* <Greetings/> */}
-			{/* <Products/> */}
-			{/* <Clock2 textColor ="red" bgColor="yellow"/> */}
-			{/* <Image/> */}
-			{/* <Gallery/> */}
-			{/* <ProfileCard name="Recep Yigiter" location="Istanbul, Turkiye" shot="51" followers="1002" following="100" avatar="resim1.png"/> */}
-			{/* <BootstrapClassic/> */}
-			{/* <BootstrapDynamic/> */}
-			{/* <Icons/> */}
-			{/* <Events/> */}
-			{/* <Shop/> */}
-			{/* <Stateless /> */}
-			{/* <State/> */}
-			{/* <Counter/> */}
-			{/* <Birthday/> */}
-			{/* <UseEffect /> */}
-			{/* {false && <UseEffect />} */}
-			{/* <Clock3/> */}
-			{/* <UseEffect2/> */}
-			{/* <CountryFilter/> */}
-			{/* <UseRef/> */}
-			{/* <Scroll/> */}
-			{/* <ClassComp/> */}
-			{/* <UserCards/> */}
-			{/* <Countries />   */}
-			{/* <ParentComp/> */}
-			{/* <ToDoApp/> */}
-			{/* <Form1/>
-			<Form2/>
-			<Form3/> */}
-			{/* <Form4 /> */}
-			{/* <Form5 /> */}
-			{/* <Form6 /> */}
-
-			{/*
-      <RandomImages/>
-      <AxiosCrud/>
-      */}
-		</>
+			</BrowserRouter>
+		</StoreContext.Provider>
 	);
 }
+
+// function App() {
+// 	return (
+// 		<>
+// 		<BrowserRouter>
+// 				<Header/>
+// 				<Container fluid>
+// 					<Row>
+// 						<Col sm={2}>
+// 							<Menu1/>
+// 						</Col>
+// 						<Col sm={10}>
+// 							<Routes>
+// 								<Route path="/hello-world" element={<HelloWorld/>}/>
+// 								<Route path="/image" element={<Image/>}/>
+// 								<Route path="/useEffect" element={UseEffect2}/>
+// 								<Route path="/bootstrap" element={<BootstrapClassic/>}/>
+// 							</Routes>
+// 						</Col>
+// 					</Row>
+// 				</Container>
+// 		</BrowserRouter>
+// 			{/* <HelloWorld/> */}
+// 			{/* <Jsx1/> */}
+// 			{/* <Jsx2/> */}
+// 			{/* <Jsx3/> */}
+// 			{/* <Jsx4/> */}
+// 			{/* <Jsx5/> */}
+// 			{/* <Jsx6/> */}
+// 			{/* <Style1/>*/}
+// 			{/* <Style2/> */}
+// 			{/* <Style3/> */}
+// 			{/* <Style4/> */}
+// 			{/* <Clock1/> */}
+// 			{/* <Greetings/> */}
+// 			{/* <Products/> */}
+// 			{/* <Clock2 textColor ="red" bgColor="yellow"/> */}
+// 			{/* <Image/> */}
+// 			{/* <Gallery/> */}
+// 			{/* <ProfileCard name="Recep Yigiter" location="Istanbul, Turkiye" shot="51" followers="1002" following="100" avatar="resim1.png"/> */}
+// 			{/* <BootstrapClassic/> */}
+// 			{/* <BootstrapDynamic/> */}
+// 			{/* <Icons/> */}
+// 			{/* <Events/> */}
+// 			{/* <Shop/> */}
+// 			{/* <Stateless /> */}
+// 			{/* <State/> */}
+// 			{/* <Counter/> */}
+// 			{/* <Birthday/> */}
+// 			{/* <UseEffect /> */}
+// 			{/* {false && <UseEffect />} */}
+// 			{/* <Clock3/> */}
+// 			{/* <UseEffect2/> */}
+// 			{/* <CountryFilter/> */}
+// 			{/* <UseRef/> */}
+// 			{/* <Scroll/> */}
+// 			{/* <ClassComp/> */}
+// 			{/* <UserCards/> */}
+// 			{/* <Countries />   */}
+// 			{/* <ParentComp/> */}
+// 			{/* <ToDoApp/> */}
+// 			{/* <Form1/>
+// 			<Form2/>
+// 			<Form3/> */}
+// 			{/* <Form4 /> */}
+// 			{/* <Form5 /> */}
+// 			{/* <Form6 /> */}
+
+// 			{/*
+//       <RandomImages/>
+//       <AxiosCrud/>
+//       */}
+// 		</>
+// 	);
+// }
 
 export default App;
