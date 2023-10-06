@@ -4,7 +4,7 @@ import StoreContext from "../../store";
 
 const Content = () => {
 	const [amount, setAmount] = useState(1);
-	const [currency, setCurrency] = useState("EUR");
+	const [currency, setCurrency] = useState("USD");
 	const [result, setResult] = useState(0);
 
 	const store = useContext(StoreContext);
