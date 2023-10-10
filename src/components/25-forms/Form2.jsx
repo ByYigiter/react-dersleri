@@ -17,8 +17,8 @@ const Form2 = () => {
 	}, [name1, name2]);
 	return (
 		<Container className="mt-5">
-			<Form >
-				<Form.Group className="mb-3" >
+			<Form>
+				<Form.Group className="mb-3">
 					<Form.Control
 						type="number"
 						placeholder="1.sayi"

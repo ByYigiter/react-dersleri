@@ -21,15 +21,15 @@ const Form6 = () => {
 				values
 			);
 			console.log(resp.data);
-            localStorage.setItem("token",resp.data.token)
+			localStorage.setItem("token", resp.data.token);
 		} catch (err) {
 			console.log(err);
 			alert(err.resp.data.message);
 		}
 	};
 	const formik = useFormik({
-        // bu şekilde de olur
-		initialValues:initialValues, 
+		// bu şekilde de olur
+		initialValues: initialValues,
 		validationSchema,
 		onSubmit,
 	});
