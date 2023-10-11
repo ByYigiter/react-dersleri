@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 const UseRef = () => {
 	const emailRef = useRef(null);
 
-    // useref ile hangi element ile ilişkillendirirsek o elemente erişilebilir  
+	// useref ile hangi element ile ilişkillendirirsek o elemente erişilebilir
 	const setFocus = () => {
 		console.log(emailRef);
 		emailRef.current.focus();
