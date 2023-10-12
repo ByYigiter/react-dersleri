@@ -39,7 +39,7 @@ const Clock3 = (props) => {
 		return () => {
 			clearInterval(timer);
 		};
-	},[]);
+	}, []);
 
 	return (
 		<div className="clock-container" style={clockStyle}>
