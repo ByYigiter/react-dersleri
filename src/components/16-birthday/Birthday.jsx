@@ -16,6 +16,7 @@ const Birthday = () => {
 			{people.map((item) => (
 				<PersonCard {...item} key={item.id} deletePerson={deletePerson} />
 			))}
+
 			<Button
 				variant="danger"
 				onClick={() => setPeople([])}
@@ -23,6 +24,7 @@ const Birthday = () => {
 			>
 				Remove All
 			</Button>
+
 			<Button variant="success" onClick={() => setPeople(data)}>
 				Reload Data
 			</Button>
