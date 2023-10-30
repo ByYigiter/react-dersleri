@@ -3,7 +3,6 @@ import { Alert } from 'react-bootstrap'
 
 const Events = () => {
 
-
     //Evenet handler
     const sayHello =() =>{
         alert("Onclick işlemi yapıldı");
