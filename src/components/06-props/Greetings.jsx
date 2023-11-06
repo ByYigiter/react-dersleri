@@ -1,16 +1,14 @@
-import React from 'react'
-import Welcome from './Welcome'
-
+import React from "react";
+import Welcome from "./Welcome";
 
 const Greetings = () => {
-  return (
-    <div>
-        <Welcome firstName="Recep" lastName="Yigiter"></Welcome>
-        <Welcome firstName="Veli" lastName="Can"></Welcome>
-        <Welcome firstName="ayse" lastName="Yilmaz"></Welcome>
+	return (
+		<div>
+			<Welcome firstName="Recep" lastName="Yigiter"></Welcome>
+			<Welcome firstName="Veli" lastName="Can"></Welcome>
+			<Welcome firstName="ayse" lastName="Yilmaz"></Welcome>
+		</div>
+	);
+};
 
-    </div>
-  )
-}
-
-export default Greetings
+export default Greetings;
