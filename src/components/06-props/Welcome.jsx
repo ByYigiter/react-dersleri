@@ -1,16 +1,15 @@
-import React from 'react';
+import React from "react";
 import "./welcome.scss";
 
-
 const Welcome = (props) => {
+	/* destructiring of object */
+	const { firstName, lastName } = props;
 
-  /* destructiring of object */  
-  const {firstName, lastName} = props;
+	return (
+		<h1 className="welcomeh1">
+			Welcome {firstName} {lastName}
+		</h1>
+	);
+};
 
-
-  return (
-    <h1 className='welcomeh1'>Welcome {firstName} {lastName}</h1>
-  )
-}
-
-export default Welcome
+export default Welcome;
